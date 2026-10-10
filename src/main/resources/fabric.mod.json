@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "${modid}",
+  "id": "slime_bounce_sync",
   "version": "${version}",
   "name": "Slime Bounce Sync",
   "description": "Fixes desyncs for slime block launchers no the server side!",

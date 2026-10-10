@@ -7,7 +7,7 @@ loom {
 	splitEnvironmentSourceSets()
 
 	mods {
-		"${modid}" {
+		"slime_bounce_sync" {
 			sourceSet sourceSets.main
 			sourceSet sourceSets.client
 		}

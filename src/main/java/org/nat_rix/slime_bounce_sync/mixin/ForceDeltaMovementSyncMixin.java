@@ -8,14 +8,14 @@ public class ForceDeltaMovementSyncMixin {
   )
   private static void forceDeltaMovementSync(
       net.minecraft.world.entity.Entity entity,
-      static double x,
-      static double y,
-      static double z,
-      org.spongepowered.asm.mixin.injection.callback.CallbackInfo info
+      final double x,
+      final double y,
+      final double z,
+      final org.spongepowered.asm.mixin.injection.callback.CallbackInfo info
   ) {
-    auto level = entity.level();
+    var level = entity.level();
     if (level != null) {
-      auto server = level.getServer();
+      var server = level.getServer();
       if (server != null) {
         server.forceGameTimeSynchronization();
       }
