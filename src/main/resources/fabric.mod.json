@@ -7,6 +7,7 @@
   "authors": [
     "nat-rix"
   ],
+  "license": "MIT",
   "icon": "assets/slimy_launch_patch/icon.png",
   "environment": "*",
   "mixins": [
