@@ -36,12 +36,16 @@ public abstract class InvalidateBadClientPacketsMixin {
     final boolean horColl,
     final com.llamalad7.mixinextras.injector.wrapoperation.Operation<Void> op
   ) {
-    if (packetListener.getPlayer() instanceof org.nat_rix.slimy_launch_patch.IExtEntity extEntity
+    var player = packetListener.getPlayer();
+    if (player instanceof org.nat_rix.slimy_launch_patch.IExtEntity extEntity
         && extEntity.getSlimeBounceTicks() != 0) {
       var movement = packetListener.getPlayer().getDeltaMovement();
       if (isBadMovement(movement.x, x, lastGoodX)
        || isBadMovement(movement.y, y, lastGoodY)
-       || isBadMovement(movement.z, z, lastGoodZ)) return;
+       || isBadMovement(movement.z, z, lastGoodZ)) {
+        extEntity.forcePlayerSyncMotion();
+        return;
+      }
     }
 
     op.call(packetListener, x, y, z, yRot, xRot, isOnGround, horColl);

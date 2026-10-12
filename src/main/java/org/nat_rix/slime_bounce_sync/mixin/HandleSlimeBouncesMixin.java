@@ -16,8 +16,10 @@ public class HandleSlimeBouncesMixin {
     final double z,
     final com.llamalad7.mixinextras.injector.wrapoperation.Operation<Void> op
   ) {
-    if (entity instanceof org.nat_rix.slimy_launch_patch.IExtEntity extEntity)
-      extEntity.setSlimeBounceTicks(2);
+    if (entity instanceof org.nat_rix.slimy_launch_patch.IExtEntity extEntity) {
+      extEntity.setSlimeBounceTicks(7);
+      extEntity.forcePlayerSyncMotion();
+    }
     op.call(entity, x, y, z);
   }
 }
