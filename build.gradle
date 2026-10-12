@@ -7,7 +7,7 @@ loom {
 	splitEnvironmentSourceSets()
 
 	mods {
-		"slime_bounce_sync" {
+		"slimy_launch_patch" {
 			sourceSet sourceSets.main
 			sourceSet sourceSets.client
 		}

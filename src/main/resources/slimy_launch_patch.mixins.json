@@ -1,9 +1,11 @@
 {
   "required": true,
-  "package": "org.nat_rix.slime_bounce_sync.mixin",
+  "package": "org.nat_rix.slimy_launch_patch.mixin",
   "compatibilityLevel": "JAVA_25",
   "mixins": [
-    "ForceDeltaMovementSyncMixin"
+    "HandleSlimeBouncesMixin",
+    "EntitySlimeBounceCounter",
+    "InvalidateBadClientPacketsMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -1,15 +1,16 @@
 {
   "schemaVersion": 1,
-  "id": "slime_bounce_sync",
+  "id": "slimy_launch_patch",
   "version": "${version}",
-  "name": "Slime Bounce Sync",
-  "description": "Fixes desyncs for slime block launchers no the server side!",
+  "name": "Slimy Launch Patch",
+  "description": "Fixes desyncs for slime block launchers on the server side.",
   "authors": [
     "nat-rix"
   ],
+  "icon": "assets/slimy_launch_patch/icon.png",
   "environment": "*",
   "mixins": [
-    "mixins.json"
+    "slimy_launch_patch.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.19.5",
